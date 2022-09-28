@@ -1,0 +1,29 @@
+name: Compartir datos entre jobs
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+       matrix:
+        config: [Debug, Release]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore src/wpm-api/WisdomPetMedicine.sln
+    - name: Build
+      run: dotnet build src/wpm-api/WisdomPetMedicine.sln --no-restore --configuration ${{ matrix.config }}
+    - name: Test
+      run: dotnet test src/wpm-api/WisdomPetMedicine.sln --no-build --verbosity normal
+    - name: Publish
+      run: dotnet publish src/wpm-api/WisdomPetMedicine.sln --configuration Release --output publish
