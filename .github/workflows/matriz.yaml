@@ -1,4 +1,4 @@
-name: Compartir datos entre jobs
+name: Matriz para variaciones
 
 on:
   push:
@@ -11,8 +11,8 @@ jobs:
 
     runs-on: ubuntu-latest
     strategy:
-       matrix:
-        config: [Debug, Release]
+      matrix:
+        configuration: [Debug, Release]
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
@@ -22,8 +22,4 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore src/wpm-api/WisdomPetMedicine.sln
     - name: Build
-      run: dotnet build src/wpm-api/WisdomPetMedicine.sln --no-restore --configuration ${{ matrix.config }}
-    - name: Test
-      run: dotnet test src/wpm-api/WisdomPetMedicine.sln --no-build --verbosity normal
-    - name: Publish
-      run: dotnet publish src/wpm-api/WisdomPetMedicine.sln --configuration Release --output publish
+      run: dotnet build src/wpm-api/WisdomPetMedicine.sln --no-restore --configuration ${{ matrix.configuration }}
