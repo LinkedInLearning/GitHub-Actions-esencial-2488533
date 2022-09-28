@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WisdomPetMedicine.Api", "WisdomPetMedicine.Api\WisdomPetMedicine.Api.csproj", "{DAE6972E-F1DE-4D1B-8CC3-549F2C1AC565}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WisdomPetMedicine.Tests", "WisdomPetMedicine.Tests\WisdomPetMedicine.Tests.csproj", "{68280BC0-2C81-44ED-85F5-E68008AC0A55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{DAE6972E-F1DE-4D1B-8CC3-549F2C1AC565}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAE6972E-F1DE-4D1B-8CC3-549F2C1AC565}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAE6972E-F1DE-4D1B-8CC3-549F2C1AC565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68280BC0-2C81-44ED-85F5-E68008AC0A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68280BC0-2C81-44ED-85F5-E68008AC0A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68280BC0-2C81-44ED-85F5-E68008AC0A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68280BC0-2C81-44ED-85F5-E68008AC0A55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
