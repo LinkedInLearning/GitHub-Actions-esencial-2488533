@@ -1,0 +1,26 @@
+name: Matriz de configuraciones y versión de .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+        dotnetversion: [6.0.x, 7.0.x]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: ${{ matrix.dotnetversion }}
+        include-prerelease: true
+    - name: Restore dependencies
+      run: dotnet restore src/wpm-api/WisdomPetMedicine.sln
+    - name: Build
+      run: dotnet build src/wpm-api/WisdomPetMedicine.sln --configuration ${{ matrix.configuration }} --no-restore
