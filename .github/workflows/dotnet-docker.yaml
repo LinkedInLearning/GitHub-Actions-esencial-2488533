@@ -27,6 +27,6 @@ jobs:
     name: Contenerización con Docker y .NET
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@3
+    - uses: actions/checkout@v3
     - name: docker build
       run: docker build src/wpm-api --file src/wpm-api/WisdomPetMedicine.Api/Dockerfile --tag github-action-esencial
