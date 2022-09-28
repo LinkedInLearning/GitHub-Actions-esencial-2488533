@@ -23,3 +23,9 @@ jobs:
       run: dotnet build src/wpm-api/WisdomPetMedicine.sln --no-restore
     - name: Test
       run: dotnet test src/wpm-api/WisdomPetMedicine.sln --no-build --verbosity normal
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Crear imagen de Docker
+      run: docker build src/wpm-api --file src/wpm-api/WisdomPetMedicine.Api/Dockerfile --tag github-actions-esencial
