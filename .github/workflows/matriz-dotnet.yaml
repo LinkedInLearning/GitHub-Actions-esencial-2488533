@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         configuration: [Debug, Release]
-        dotnetversion: [6.0.x, 7.0x]
+        dotnetversion: [6.0.x, 7.0.x]
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
