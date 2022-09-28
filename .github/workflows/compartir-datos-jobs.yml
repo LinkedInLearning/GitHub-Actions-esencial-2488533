@@ -40,4 +40,4 @@ jobs:
         path: publish
     - name: Print the final result
       shell: bash
-      run: ls publish
+      run: ls publish -R
