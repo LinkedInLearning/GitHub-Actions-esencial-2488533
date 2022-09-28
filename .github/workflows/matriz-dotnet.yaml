@@ -20,7 +20,6 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: ${{ matrix.dotnetversion }}
-        dotnet-quality: 'preview'
         include-prerelease: true
     - name: Restore dependencies
       run: dotnet restore src/wpm-api/WisdomPetMedicine.sln
