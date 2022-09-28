@@ -1,0 +1,26 @@
+name: Matriz para variaciones
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+        dotnetversion: [6.0.x, 7.0x]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: ${{ matrix.dotnetversion }}
+    - name: Restore dependencies
+      run: dotnet restore src/wpm-api/WisdomPetMedicine.sln
+    - name: Build
+      run: dotnet build src/wpm-api/WisdomPetMedicine.sln --no-restore --configuration ${{ matrix.configuration }}
