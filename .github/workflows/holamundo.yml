@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore src/wpm-api/WisdomPetMedicine.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build src/wpm-api/WisdomPetMedicine.sln --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test src/wpm-api/WisdomPetMedicine.sln --no-build --verbosity normal
