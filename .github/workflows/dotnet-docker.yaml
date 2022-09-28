@@ -26,6 +26,7 @@ jobs:
   docker:
     name: Contenerización con Docker y .NET
     runs-on: ubuntu-latest
+    needs: [build]
     steps:
     - uses: actions/checkout@v3
     - name: docker build
