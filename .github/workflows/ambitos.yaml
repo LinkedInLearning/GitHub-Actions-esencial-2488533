@@ -1,4 +1,4 @@
-name: Variables
+name: Ámbitos
 
 on:
   push:
@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SOLUTION_PATH: src/wpm-api/WisdomPetMedicine.sln
+      DOCKERFILE_PATH: src/wpm-api/WisdomPetMedicine.Api/Dockerfile
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
@@ -25,3 +26,11 @@ jobs:
       run: dotnet build $SOLUTION_PATH --no-restore
     - name: Test
       run: dotnet test $SOLUTION_PATH --no-build --verbosity normal
+  docker:
+    name: Contenerización con Docker y .NET
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+    - uses: actions/checkout@v3
+    - name: docker build
+      run: docker build src/wpm-api --file $DOCKERFILE_PATH --tag github-action-esencial
