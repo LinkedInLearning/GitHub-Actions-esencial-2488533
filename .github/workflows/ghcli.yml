@@ -2,9 +2,7 @@ name: ghcli
 
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        required: false
+  
 jobs:
   build:
     strategy:
