@@ -1,4 +1,4 @@
-name: Matriz de configuraciones y versión de .NET - ghcli
+name: ghcli
 
 on:
   workflow_dispatch
