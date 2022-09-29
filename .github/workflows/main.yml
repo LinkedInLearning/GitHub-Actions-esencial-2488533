@@ -1,15 +1,12 @@
 name: Variables de ambiente
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
-  build:
+  show:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a one-line script
+      - name: Mostrar valores de variables de ambiente
         run: echo $GITHUB_ACTION && 
              echo $GITHUB_EVENT_NAME && 
              echo $GITHUB_REPOSITORY && 
