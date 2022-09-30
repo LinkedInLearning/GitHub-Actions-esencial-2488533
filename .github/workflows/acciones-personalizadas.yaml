@@ -1,0 +1,17 @@
+name: Acciones personalizadas
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test_actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Nombres de personajes
+        uses: ./actions
+        id: personajes
+        with:
+          person_id: ${{ github.run_number }}
+      - name: Regresa el personaje
+        run: echo "${{ steps.personajes.outputs.person_name }}"
