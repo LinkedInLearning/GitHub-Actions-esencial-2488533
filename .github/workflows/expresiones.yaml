@@ -33,7 +33,7 @@ jobs:
       run: echo ${{ github.ref }} 
     - name: Ejecución de pruebas unitarias
       run: dotnet test $SOLUTION_PATH
-      if: ${{ github.ref == 'refs/heads/main' }}
+      if: ${{ github.ref == 'refs/heads/main' && contains('6.0', $CONFIGURATION) }}
     - name: Mostrar mensaje
       run: echo 'Pruebas unitarias exitosas'
       if: ${{ success() }}
