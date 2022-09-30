@@ -27,4 +27,4 @@ jobs:
       run: echo ${{ matrix.dotnetversion }}
     - name: Pruebas unitarias
       run: dotnet test $SOLUTION_PATH
-      if: ${{ contains('6.0', matrix.dotnetversion ) }}
+      if: ${{ contains(matrix.dotnetversion, '6.0') }}
