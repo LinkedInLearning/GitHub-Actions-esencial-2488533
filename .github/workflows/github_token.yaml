@@ -35,8 +35,17 @@ jobs:
       name: Log in en Docker Hub
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        password: PASSWORDINCORRECTO
 
-    - name: Subir imagen a Docker Hub
-      run: docker push rdiazconcha/github-actions-esencial:${{ github.run_number }}
-    
+    - name: Crear un issue con el API REST
+      if: ${{ failure() }}
+      run: |
+        curl --request POST \
+        --url https://api.github.com/repos/${{ github.repository }}/issues \
+        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+        --header 'content-type: application/json' \
+        --data '{
+          "title": "No se puede autenticar con Docker Hub",
+          "body": "Error en el workflow **${{ github.workflow }}**."
+          }' \
+        --fail
