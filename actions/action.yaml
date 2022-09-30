@@ -1,0 +1,15 @@
+name: 'Nombre del personaje de SW'
+description: 'Regresa el nombre del personaje'
+inputs:
+  person_id:
+    description: 'Id del personaje'
+    required: true
+    default: 1
+outputs:
+  person_name:
+    description: 'Nombre del personaje'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.person_id}}
