@@ -1,3 +1,12 @@
+name: GitHub Token
+
+on:
+  workflow_dispatch:
+
+env:
+  SOLUTION_PATH: src/wpm-api/WisdomPetMedicine.sln
+  DOCKERFILE_PATH: src/wpm-api/WisdomPetMedicine.Api/Dockerfile
+
 jobs:
   build:
     runs-on: ubuntu-latest
