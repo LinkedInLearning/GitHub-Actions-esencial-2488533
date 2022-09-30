@@ -23,6 +23,8 @@ jobs:
       run: dotnet restore $SOLUTION_PATH
     - name: Build
       run: dotnet build $SOLUTION_PATH --configuration ${{ matrix.configuration }} --no-restore
+    - name: Versión
+      run: echo ${{ matrix.dotnetversion }}
     - name: Pruebas unitarias
       run: dotnet test $SOLUTION_PATH
       if: ${{ contains('6.0', matrix.dotnetversion ) }}
