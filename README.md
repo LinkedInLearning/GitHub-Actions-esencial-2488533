@@ -1,11 +1,13 @@
 # GitHub Actions esencial
-Este es el repositorio del curso de LinkedIn Learning `[GitHub Actions esencial]`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
+Este es el repositorio del curso de LinkedIn Learning `GitHub Actions esencial`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
 ![Nombre completo del curso][lil-thumbnail-url] 
 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
 DESCRIPCIÓN DEL CURSO
+
+Explora GitHub Actions como plataforma CI/CD para el control de código fuente que te permitirá automatizar, personalizar y ejecutar tus flujos de trabajo de desarrollo de software directamente en tu repositorio. Durante este contenido descubrirás por qué es necesaria este tipo de tecnologías para la práctica y disciplina de DevOps y los conceptos más destacables de la plataforma a través de ejemplos claros.
 
 ## Instrucciones
 Este repositorio tiene ramas (branches) para cada uno de los vídeos del curso. Puedes usar el menú emergente de la rama en GitHub para cambiar a una rama específica y echar un vistazo al curso en esa etapa, o puedes añadir `/tree/nombre_de_la_rama` a la URL para ir a la rama a la que quieres acceder.
@@ -22,9 +24,9 @@ Las ramas están estructuradas para corresponder a los vídeos del curso. La con
 
 ### Docente
 
-**Nombre del docente**
+**Rodrigo Díaz Concha**
 
-Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/).
+Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/rodrigo-diaz-concha).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 [lil-course-url]: https://www.linkedin.com/learning/building-a-graphql-project-with-react-js
