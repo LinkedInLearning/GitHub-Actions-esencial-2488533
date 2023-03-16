@@ -1,7 +1,7 @@
 # GitHub Actions esencial
 Este es el repositorio del curso de LinkedIn Learning `GitHub Actions esencial`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
-![image](https://user-images.githubusercontent.com/71371373/204992108-9a297118-2335-4810-a345-1a9657e6683b.png)
+![COURSENAME][lil-thumbnail-url] 
 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
@@ -23,7 +23,4 @@ Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.c
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 [lil-course-url]: https://www.linkedin.com/learning/github-actions-esencial/desde-los-procesos-mas-simples-hasta-los-mas-complejos-con-github-actions
-[lil-thumbnail-url]: https://cdn.lynda.com/course/2875095/2875095-1615224395432-16x9.jpg
-
-
-[1]: # (End of ES-Instruction ###############################################################################################)
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/C4E0DAQEdv3abpu4GoA/learning-public-crop_675_1200/0/1669818267108?e=2147483647&v=beta&t=CasWbfDT7N6QpkezKOzQHvAr4FRw6KStKkQoW1YUKn8
